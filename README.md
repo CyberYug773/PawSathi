@@ -42,7 +42,7 @@ PawSathi analyzes the request, determines which tools are useful, retrieves info
 
 
 # 🤖 How PawSathi Works
-
+```
                     User Request
                          │
                          ▼
@@ -72,7 +72,7 @@ PawSathi analyzes the request, determines which tools are useful, retrieves info
                          ▼
                   PawSathi UI
 
-
+```
 # ✨ Key Features
 
 ## 🧠 AI Agent Planning
@@ -212,7 +212,7 @@ For emergencies, users should contact qualified veterinary professionals or appr
 
 
 # 📁 Project Structure
-
+```
 
 PawSathi/
 │
@@ -261,7 +261,7 @@ PawSathi/
 │   └── .gitignore
 │
 └── README.md
-
+```
 
 
 # ⚙️ Installation
