@@ -270,7 +270,7 @@ PawSathi/
 
 ```bash
 git clone <your-repository-url>
-cd rescue-ai
+cd PawSathi
 ```
 
 ---
