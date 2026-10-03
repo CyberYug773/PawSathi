@@ -1,18 +1,17 @@
 # 🐾 PawSathi
 
-### AI-Powered Animal Rescue Research Assistant for NGOs
+### AI-Powered Animal Rescue Research Assistant
 
-PawSathi is an AI-agent-based research assistant designed for **animal rescue NGOs, volunteers, shelters, and animal welfare teams in India**.
+PawSathi is an AI-agent-based research assistant designed for **individuals, animal lovers, and animal welfare teams in India**.
 
 It accepts natural-language rescue-related requests and intelligently selects the appropriate research tools to find useful information from the web, Google Maps, Google News, Google Images, and YouTube.
 
-The goal is to reduce the time rescue teams spend searching for veterinary hospitals, animal shelters, rescue organizations, welfare information, news, and educational resources.
+The goal is to reduce the time rescue teams or an individual spend searching for veterinary hospitals, animal shelters, rescue organizations, welfare information, news, and educational resources.
 
----
 
 ## 🚨 Problem
 
-Animal rescue organizations often need to find information quickly:
+Animal rescue organizations or volunteers often need to find information quickly:
 
 * Where is the nearest veterinary hospital?
 * Which animal rescue NGOs operate in a particular city?
@@ -25,7 +24,6 @@ Normally, this requires searching multiple platforms separately.
 
 During an emergency, this can waste valuable time.
 
----
 
 ## 💡 Solution
 
@@ -39,17 +37,12 @@ or
 
 > "Find recent animal rescue news in Rajasthan"
 
-or
-
-> "Find animal rescue training videos in India"
 
 PawSathi analyzes the request, determines which tools are useful, retrieves information, and presents the results in an organized interface.
 
----
 
 # 🤖 How PawSathi Works
 
-```text
                     User Request
                          │
                          ▼
@@ -78,9 +71,7 @@ PawSathi analyzes the request, determines which tools are useful, retrieves info
                          │
                          ▼
                   PawSathi UI
-```
 
----
 
 # ✨ Key Features
 
@@ -90,45 +81,24 @@ PawSathi analyzes the user's request and determines which tools should be used.
 
 For example:
 
-```text
 "Find animal hospitals near Jaipur"
         ↓
 Google Maps
-```
 
-```text
+
+
 "Find recent animal rescue news"
         ↓
 Google News
-```
 
-```text
+
 "Find animal rescue training videos"
         ↓
 YouTube
-```
+
 
 Multiple tools can also be selected for a single request.
 
----
-
-## 🇮🇳 India-Focused Research
-
-PawSathi is designed specifically for animal rescue and welfare use cases in India.
-
-Searches are enriched with India-related context so that results can be focused on:
-
-* Indian veterinary services
-* Indian animal welfare organizations
-* Indian NGOs
-* Indian shelters
-* Indian rescue centers
-* Indian animal welfare news
-* Indian educational resources
-
-The project is also designed to progressively strengthen source filtering so that irrelevant international results can be excluded.
-
----
 
 ## 🏥 Veterinary Hospital Search
 
@@ -147,12 +117,7 @@ Results can include:
 * Google Maps directions
 
 Example:
-
-```text
 Find animal hospitals near Jaipur
-```
-
----
 
 ## 🐾 Animal Rescue Organizations
 
@@ -166,7 +131,7 @@ PawSathi can search for:
 
 Users can quickly access available contact information and websites.
 
----
+
 
 ## 📰 Animal Rescue News
 
@@ -181,21 +146,6 @@ PawSathi can search recent news related to:
 * Rescue incidents
 * Local developments
 
----
-
-## 🖼️ Image Search
-
-The agent can search for visual resources related to:
-
-* Animal rescue
-* Animal welfare
-* Adoption
-* Veterinary care
-* Rescue awareness
-* Educational material
-* Awareness posters
-
----
 
 ## ▶️ YouTube Search
 
@@ -208,7 +158,7 @@ PawSathi can find educational and training videos related to:
 * Rescue training
 * Awareness campaigns
 
----
+
 
 # 🛡️ PawSathi Safety Principles
 
@@ -225,7 +175,7 @@ The system is designed to avoid:
 
 For emergencies, users should contact qualified veterinary professionals or appropriate rescue organizations directly.
 
----
+
 
 # 🧰 Technology Stack
 
@@ -242,10 +192,6 @@ For emergencies, users should contact qualified veterinary professionals or appr
 * Node.js
 * Express.js
 
-## Database
-
-* MongoDB
-* Mongoose
 
 ## Search & Research
 
@@ -263,12 +209,12 @@ For emergencies, users should contact qualified veterinary professionals or appr
 * REST API
 * Modular search tools
 
----
+
 
 # 📁 Project Structure
 
-```text
-rescue-ai/
+
+PawSathi/
 │
 ├── frontend/
 │   │
@@ -315,9 +261,8 @@ rescue-ai/
 │   └── .gitignore
 │
 └── README.md
-```
 
----
+
 
 # ⚙️ Installation
 
@@ -349,11 +294,7 @@ Create a `.env` file:
 ```env
 PORT=5000
 
-MONGODB_URI=mongodb://127.0.0.1:27017/rescue-ai
-
 SERPAPI_KEY=your_serpapi_api_key_here
-
-OPENAI_API_KEY=your_openai_api_key_here
 
 CLIENT_URL=http://localhost:5173
 ```
@@ -363,12 +304,9 @@ CLIENT_URL=http://localhost:5173
 | Variable         | Description                     |
 | ---------------- | ------------------------------- |
 | `PORT`           | Backend server port             |
-| `MONGODB_URI`    | MongoDB connection string       |
 | `SERPAPI_KEY`    | SerpApi API key                 |
-| `OPENAI_API_KEY` | Optional future LLM integration |
 | `CLIENT_URL`     | Frontend URL                    |
 
-> Never commit your `.env` file or API keys to GitHub.
 
 Start the backend:
 
@@ -468,9 +406,8 @@ backend/agents/planner.js
 
 The planner analyzes the request and determines:
 
-* Whether the request is within RescueAI's scope
+* Whether the request is within PawSathi's scope
 * Which tools should be used
-* The India-focused search query
 * The research scope
 
 ---
@@ -555,37 +492,6 @@ An external LLM can be integrated later for more advanced reasoning and natural-
 
 ---
 
-# 🗄️ MongoDB
-
-MongoDB is included for conversation memory.
-
-The conversation model is located at:
-
-```text
-backend/models/conversation.js
-```
-
-Current model:
-
-```text
-Conversation
- ├── sessionId
- └── messages
-      ├── role
-      ├── content
-      └── timestamps
-```
-
-Future versions can use this to remember:
-
-* NGO information
-* Previous searches
-* Rescue cases
-* Preferred locations
-* Conversation history
-* Frequently used services
-
----
 
 # 🧪 Example Requests
 
@@ -660,7 +566,7 @@ Google Images
 the user interacts with:
 
 ```text
-             RescueAI
+             PawSathi
                  │
         Understands the request
                  │
@@ -691,11 +597,9 @@ This makes the system particularly useful for time-sensitive animal rescue resea
 * [x] YouTube
 * [x] Agent planner
 * [x] Tool selection
-* [x] India-focused request handling
 * [x] Animal-rescue scope restriction
 * [x] Rescue result cards
 * [x] Reset functionality
-* [x] MongoDB model
 
 ## Phase 2
 
